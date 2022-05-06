@@ -1,0 +1,36 @@
+@media (min-width: 0px) {
+  body {
+    background-color: #D41314;
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    background-color: aquamarine;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: darkgreen;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    background-color: deeppink;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: gold;
+  }
+}
+
+@media (min-width: 2000px) {
+  body {
+    background-color: darkblue;
+  }
+}
+/*# sourceMappingURL=style.css.map */
