@@ -36,6 +36,7 @@ $colorsLikert: (
 );
 
 *{
+    font-family: Arial;
     margin: 0;
     padding: 0;
     border: 0;
@@ -74,7 +75,8 @@ $colorsLikert: (
         list-style-type: none;
     }
     li {
-        margin: 10px;
+        margin: 35px;
+        font-size: 30px
     }
 }
 
@@ -105,7 +107,6 @@ $colorsLikert: (
     img{
         width: 50px;
         height: 50px;
-        border: 1px solid black;
     }
     a{
         margin: 0 20px;
@@ -114,7 +115,31 @@ $colorsLikert: (
     }
 }
 
-main, section {
+section {
+    height: 75vh;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid black;
+    font-weight: bold;
+
+    h2{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 27px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+    ul{
+        font-size: 18px;
+    }
+}
+main {
+    font-size: 23px;
     height: 75vh;
     text-align: center;
     overflow: hidden;
@@ -122,7 +147,7 @@ main, section {
 }
 
 #Destaque {
-    background: url(/img/Destaque_o20.png) ;
+    background-image: url("/Projeto\ Oficial/src/img/Destaque_o20.png") ;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -143,6 +168,20 @@ main, section {
     background: $gradienteLinks;
 }
 
+#Rodape {
+    background: $backgroundSecondaryColor;
+    color: $fontSecondaryColor;
+    justify-content: space-between;
+
+    ul {
+        list-style-type: none;
+    }
+
+    p, li{
+        margin: 15px;
+        font-size: 18px;
+    }
+}
 
 .botao {
     background-color: $backgroundSecondaryColor;
@@ -195,12 +234,9 @@ main, section {
         }
     }   
 }
-// Smartphones em modo paisagem
-@media (min-width: map-get($breakpoints, sm)) and (orientation: landscape) {
 
-}
-// Tablets em modo retrato
-@media (min-width: map-get($breakpoints, sm)) and (orientation: portrait) {
+// Smartphones em modo paisagem ou Tablets em modo retrato
+@media (min-width: map-get($breakpoints, sm)) {
     #logo {
         width: 200px;
         height: 200px;
@@ -212,6 +248,7 @@ main, section {
         }
     }
 }
+
 //Tablets em modo paisagem
 @media (min-width: map-get($breakpoints, md)) {
     #logo {
@@ -242,5 +279,77 @@ main, section {
 
 //Desktops com alta definição HD e FHD
 @media (min-width: map-get($breakpoints, xl)) {
+    #sociais{
+        width: 40px;
+        height: 40px;
+    }
+}
 
+//Desktops com ultra alta definição QHD e UHD
+@media (min-width: map-get($breakpoints, xxl)) {
+    #sociais{
+        width: 60px;
+        height: 60px;
+    }
+
+    #logo {
+        width: 400px;
+        height: 400px;
+    }
+
+    #imagens {
+        width: 450px;
+        height: 450px;
+    }
+
+    #links {
+        width: 85px;
+        height: 85px;
+    }
+
+    .botao {
+        padding: 15px 25px;
+        border-radius: 10px;
+        width: 320px;
+        font-size: 35px;
+    }
+
+    .menu{
+        height: 200px;
+        ul {
+            height: 200px;
+        }
+        a{
+            font-size: 55px;
+        }
+    }
+
+    main {
+        font-size: 45px;
+    }
+
+    section{
+        h2{
+            font-size: 90px;
+        }
+    
+        h3{
+            font-size: 60px;
+        }
+    
+        p{
+            font-size: 35px;
+        }
+    
+        ul{
+            font-size: 45px;
+        }
+    }
+
+    #Rodape{
+        p, li{
+            margin: 20px;
+            font-size: 35px;
+        }
+    }
 }

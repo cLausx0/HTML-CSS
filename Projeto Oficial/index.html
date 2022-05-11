@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="description" content="Site criado para o projeto MouraTech, com fins educacionais de aprender HTML5, CSS3 E JavaScript.">
+    <meta name="author" content="David Almeida">
     <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon/favicon-16x16.png">
@@ -22,14 +23,16 @@
 
 <body>
     <!-- Cabeçalho - logo e menu -->
-    <header class="flex-container-row menu">
-        <img src="src/img/favicon.png" alt="Logo do site" id="logo">
-        <ul class="flex-container-row">
-            <li><a href="#HTML">HTML</a></li>
-            <li><a href="#CSS">CSS</a></li>
-            <li><a href="#JavaScript">JavaScript</a></li>
-            <li><a href="#LinksUteis">Links úteis</a></li>
-        </ul>
+    <header>
+        <div class="flex-container-row menu">
+            <img src="src/img/favicon.png" alt="Logo do site" id="logo">
+            <ul class="flex-container-row">
+                <li><a href="#HTML">HTML</a></li>
+                <li><a href="#CSS">CSS</a></li>
+                <li><a href="#JavaScript">JavaScript</a></li>
+                <li><a href="#LinksUteis">Links úteis</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Seção principal - destaque -->
@@ -43,7 +46,7 @@
     <!-- Seção html5 -->
     <section id="HTML" class="flex-container-column">
         <div class="flex-container-row">
-            <img src="src/img/HTML5.png" alt="Logo do HTML5">
+            <img src="src/img/HTML5.png" alt="Logo do HTML5" id="imagens">
             <div class="flex-container-column section-details">
                 <h2>HTML5</h2>
                 <h3>A HTML é a linguagem principal da web</h3>
@@ -59,7 +62,7 @@
     <!-- Seção css3 -->
     <section id="CSS" class="flex-container-column">
         <div class="flex-container-row" id="InverterFlexBox">
-            <img src="src/img/CSS3.png" alt="Logo do CSS3">
+            <img src="src/img/CSS3.png" alt="Logo do CSS3" id="imagens">
             <div class="flex-container-column section-details">
                 <h2>CSS3</h2>
                 <h3>O CSS complementa o HTML</h3>
@@ -74,7 +77,7 @@
     <!-- Seção JavaScript -->
     <section id="JavaScript" class="flex-container-column">
         <div class="flex-container-row ">
-            <img src="src/img/JS.png" alt="Logo do JavaScript">
+            <img src="src/img/JS.png" alt="Logo do JavaScript" id="imagens">
             <div class="flex-container-column section-details">
                 <h2>JavaScript</h2>
                 <h3>Com a HTML e o CSS, o JavaScript é uma das três principais tecnologias da web</h3>
@@ -89,112 +92,116 @@
     <!-- Seção Links úteis -->
     <section id="LinksUteis" class = "flex-container-column">
         <h2>Links Úteis</h2>
-        <div class = "flex-container-row alinharTop">
-            <div class="listaDeLinks">
-                <h3>Planejamento</h3>
-                <ul class = "flex-container-column">
-                    <li class = "flex-container-row">
-                        <img src="src/img/Figma_icon.png" alt="Logo do Figma">
-                        <a href="https://www.figma.com/" target="_blank" rel="nofollow">Figma</a>
-                    </li>
+            <div class = "flex-container-row alinharTop">
+                <div class="listaDeLinks flex-container-column">
+                    <h3>Planejamento</h3>
+                    <div class = "flex-container-column">
+                        <ul class = "flex-container-column">
+                            <li class = "flex-container-row">
+                                <img src="src/img/Figma_icon.png" alt="Logo do Figma" id="links">
+                                <a href="https://www.figma.com/" target="_blank" rel="nofollow">Figma</a>
+                            </li>
+    
+                            <li class = "flex-container-row">
+                                <img src="src/img/Google_icon.png" alt="Logo do Google Fonts" id="links">
+                                <a href="https://fonts.google.com/" target="_blank" rel="nofollow">Google Fonts</a>
+                            </li>
+    
+                            <li class = "flex-container-row">
+                                <img src="src/img/Unicode_icon.png" alt="Logo do unicode.org" id="links">
+                                <a href="https://home.unicode.org/" target="_blank" rel="nofollow">unicode.org</a>
+                            </li>
+    
+                            <li class = "flex-container-row">
+                                <img src="src/img/Realfavicongenerator_icon.png" alt="Logo do Real Favicon Generator" id="links">
+                                <a href="https://realfavicongenerator.net/" target="_blank" rel="nofollow">Favicon Generator</a>
+                            </li>
+                            <li class = "flex-container-row">
+                                <img src="src/img/Bootstrap_icon.png" alt="Logo do Bootstrap" id="links">
+                                <a href="https://getbootstrap.com/" target="_blank" rel="nofollow">Bootstrap</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <li class = "flex-container-row">
-                        <img src="src/img/Google_icon.png" alt="Logo do Google Fonts">
-                        <a href="https://fonts.google.com/" target="_blank" rel="nofollow">Google Fonts</a>
-                    </li>
+                <div class="listaDeLinks">
+                    <h3>Programação</h3>
+                    <div class = "flex-container-column">
+                        <ul class = "flex-container-column">
+                            <li>
+                                <img src="src/img/Git_icon.png" alt="Logo do Git" id="links">
+                                <a href="https://git-scm.com/" target="_blank" rel="nofollow">Git</a>
+                            </li>
+                            <li>
+                                <img src="src/img/Github_icon.png" alt="Logo do Github" id="links">
+                                <a href="https://github.com/" target="_blank" rel="nofollow">Github</a>
+                            </li>
+                            <li>
+                                <img src="src/img/Visual_Studio_Code_icon.png" alt="Logo do Visual Studio Code" id="links">
+                                <a href="https://code.visualstudio.com/" target="_blank" rel="nofollow">VS Code</a>
+                            </li>
+                            <li>
+                                <img src="src/img/Node.js_icon.png" alt="Logo do Node.js" id="links">
+                                <a href="https://nodejs.org/en/" target="_blank" rel="nofollow">Node.js</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <li class = "flex-container-row">
-                        <img src="src/img/Unicode_icon.png" alt="Logo do unicode.org">
-                        <a href="https://home.unicode.org/" target="_blank" rel="nofollow">unicode.org</a>
-                    </li>
-
-                    <li class = "flex-container-row">
-                        <img src="src/img/Realfavicongenerator_icon.png" alt="Logo do Real Favicon Generator">
-                        <a href="https://realfavicongenerator.net/" target="_blank" rel="nofollow">Favicon Generator</a>
-                    </li>
-                    <li class = "flex-container-row">
-                        <img src="src/img/Bootstrap_icon.png" alt="Logo do Bootstrap">
-                        <a href="https://getbootstrap.com/" target="_blank" rel="nofollow">Bootstrap</a>
-                    </li>
-                </ul>
+                <div class="listaDeLinks">
+                    <h3>Ajuda</h3>
+                    <div class = "flex-container-column">
+                        <ul class = "flex-container-column">
+                            <li >
+                                <img src="src/img/W3C_Brasil_icon.png" alt="Logo do W3C" id="links">
+                                <a href="https://www.w3.org/" target="_blank" rel="nofollow">W3C</a>
+                            </li>
+                            <li>
+                                <img src="src/img/W3C_icon.png" alt="Logo do W3C" id="links">
+                                <a href="https://validator.w3.org/" target="_blank" rel="nofollow">Validador HTML</a>
+                            </li>
+                            <li>
+                                <img src="src/img/W3C_icon.png" alt="Logo do W3C" id="links">
+                                <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="nofollow">Validador CSS</a>
+                            </li>
+                            <li>
+                                <img src="src/img/W3C_Brasil_icon.png" alt="Logo do W3C" id="links">
+                                <a href="https://www.w3c.br/" target="_blank" rel="nofollow">W3C Brasil</a>
+                            </li>
+                            <li>
+                                <img src="src/img/W3Schools_icon.png" alt="Logo do W3schools" id="links">
+                                <a href="https://www.w3schools.com/" target="_blank" rel="nofollow">W3schools</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="listaDeLinks">
-                <h3>Programação</h3>
-                <ul class = "flex-container-column">
-                    <li>
-                        <img src="src/img/Git_icon.png" alt="Logo do Git">
-                        <a href="https://git-scm.com/" target="_blank" rel="nofollow">Git</a>
-                    </li>
-                    <li>
-                        <img src="src/img/Github_icon.png" alt="Logo do Github">
-                        <a href="https://github.com/" target="_blank" rel="nofollow">Github</a>
-                    </li>
-                    <li>
-                        <img src="src/img/Visual_Studio_Code_icon.png" alt="Logo do Visual Studio Code">
-                        <a href="https://code.visualstudio.com/" target="_blank" rel="nofollow">VS Code</a>
-                    </li>
-                    <li>
-                        <img src="src/img/Node.js_icon.png" alt="Logo do Node.js">
-                        <a href="https://nodejs.org/en/" target="_blank" rel="nofollow">Node.js</a>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="listaDeLinks">
-                <h3>Ajuda</h3>
-                <ul class = "flex-container-column">
-                    <li >
-                        <img src="src/img/W3C_Brasil_icon.png" alt="Logo do W3C">
-                        <a href="https://www.w3.org/" target="_blank" rel="nofollow">W3C</a>
-                    </li>
-                    <li>
-                        <img src="src/img/W3C_icon.png" alt="Logo do W3C">
-                        <a href="https://validator.w3.org/" target="_blank" rel="nofollow">Validador HTML</a>
-                    </li>
-                    <li>
-                        <img src="src/img/W3C_icon.png" alt="Logo do W3C">
-                        <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="nofollow">Validador CSS</a>
-                    </li>
-                    <li>
-                        <img src="src/img/W3C_Brasil_icon.png" alt="Logo do W3C">
-                        <a href="https://www.w3c.br/" target="_blank" rel="nofollow">W3C Brasil</a>
-                    </li>
-                    <li>
-                        <img src="src/img/W3Schools_icon.png" alt="Logo do W3schools">
-                        <a href="https://www.w3schools.com/" target="_blank" rel="nofollow">W3schools</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-
-        
-        
     </section>
     <!-- Rodapé - Autor e contatos -->
-    <footer>
+    <footer id="Rodape" class="flex-container-row">
         <p>© 2022 - David Lucas Alves de Almeida</p>
-        <ul>
+        <ul class="flex-container-row">
             <li>
                 <a href="whatsapp:contact=+5587991691075@s.whatsapp.com&message" target="_blank" rel="nofollow">
-                <img src="src/img/WhatsApp_icon.png" alt="Logo do WhatsApp"></a>
-            </li>
+                    <img src="src/img/WhatsApp_icon.png" alt="Logo do WhatsApp" id="sociais"></a>
+                </li>
             <li>
                 <a href="mailto:david.almeida2707@gmail.com" target="_blank" rel="nofollow">
-                <img src="src/img/Gmail_icon.png" alt=""></a>
+                <img src="src/img/Gmail_icon.png" alt="Logo do Gmail" id="sociais"></a>
             </li>
             <li>
                 <a href="https://www.youtube.com/channel/UCbpW5a3Jycse1BrWDlLcs4w" target="_blank" rel="nofollow">
-                <img src="src/img/YouTube_icon.png" alt=""></a>
+                <img src="src/img/YouTube_icon.png" alt="Logo do Youtube" id="sociais"></a>
             </li>
             <li>
                 <a href="https://www.facebook.com/dlucasaa/" target="_blank" rel="nofollow">
-                <img src="src/img/Facebook_icon.png" alt=""></a>
+                <img src="src/img/Facebook_icon.png" alt="Logo do Facebook" id="sociais"></a>
              </li>
             <li>
                 <a href="https://www.instagram.com/davidlucaseu/" target="_blank" rel="nofollow">
-                <img src="src/img/Instagram_icon.png" alt=""></a>
+                <img src="src/img/Instagram_icon.png" alt="Logo do Instagram" id="sociais"></a>
             </li>
         </ul>
     </footer>

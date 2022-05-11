@@ -1,4 +1,5 @@
 * {
+  font-family: Arial;
   margin: 0;
   padding: 0;
   border: 0;
@@ -67,7 +68,8 @@
 }
 
 .menu li {
-  margin: 10px;
+  margin: 35px;
+  font-size: 30px;
 }
 
 .section-details {
@@ -114,7 +116,6 @@
 .listaDeLinks img {
   width: 50px;
   height: 50px;
-  border: 1px solid black;
 }
 
 .listaDeLinks a {
@@ -123,7 +124,32 @@
   color: #000000;
 }
 
-main, section {
+section {
+  height: 75vh;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+section h2 {
+  font-size: 40px;
+}
+
+section h3 {
+  font-size: 27px;
+}
+
+section p {
+  font-size: 18px;
+}
+
+section ul {
+  font-size: 18px;
+}
+
+main {
+  font-size: 23px;
   height: 75vh;
   text-align: center;
   overflow: hidden;
@@ -131,7 +157,7 @@ main, section {
 }
 
 #Destaque {
-  background: url(/img/Destaque_o20.png);
+  background-image: url("/Projeto Oficial/src/img/Destaque_o20.png");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -154,6 +180,23 @@ main, section {
 #LinksUteis {
   background: -webkit-gradient(linear, left top, right top, from(#BBBBBB), to(#DDDDDD));
   background: linear-gradient(90deg, #BBBBBB 0%, #DDDDDD 100%);
+}
+
+#Rodape {
+  background: #000000;
+  color: #FFFFFF;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Rodape ul {
+  list-style-type: none;
+}
+
+#Rodape p, #Rodape li {
+  margin: 15px;
+  font-size: 18px;
 }
 
 .botao {
@@ -209,7 +252,7 @@ main, section {
   }
 }
 
-@media (min-width: 576px) and (orientation: portrait) {
+@media (min-width: 576px) {
   #logo {
     width: 200px;
     height: 200px;
@@ -245,6 +288,66 @@ main, section {
   }
   .menu ul {
     height: 130px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #sociais {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 2000px) {
+  #sociais {
+    width: 60px;
+    height: 60px;
+  }
+  #logo {
+    width: 400px;
+    height: 400px;
+  }
+  #imagens {
+    width: 450px;
+    height: 450px;
+  }
+  #links {
+    width: 85px;
+    height: 85px;
+  }
+  .botao {
+    padding: 15px 25px;
+    border-radius: 10px;
+    width: 320px;
+    font-size: 35px;
+  }
+  .menu {
+    height: 200px;
+  }
+  .menu ul {
+    height: 200px;
+  }
+  .menu a {
+    font-size: 55px;
+  }
+  main {
+    font-size: 45px;
+  }
+  section h2 {
+    font-size: 90px;
+  }
+  section h3 {
+    font-size: 60px;
+  }
+  section p {
+    font-size: 35px;
+  }
+  section ul {
+    font-size: 45px;
+  }
+  #Rodape p, #Rodape li {
+    margin: 20px;
+    font-size: 35px;
   }
 }
 /*# sourceMappingURL=style.css.map */
