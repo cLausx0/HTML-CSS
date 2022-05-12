@@ -54,6 +54,10 @@ $colorsLikert: (
     align-items: center;
 }
 
+header.flex-container-row div img{
+    width: 50%;
+}
+
 .flex-container-column{
     display: flex;
     flex-direction: column;
@@ -119,7 +123,6 @@ section {
     height: 75vh;
     text-align: center;
     overflow: hidden;
-    border: 1px solid black;
     font-weight: bold;
 
     h2{
@@ -128,10 +131,6 @@ section {
 
     h3{
         font-size: 27px;
-    }
-
-    p{
-        font-size: 18px;
     }
 
     ul{
@@ -143,7 +142,6 @@ main {
     height: 75vh;
     text-align: center;
     overflow: hidden;
-    border: 1px solid black;
 }
 
 #Destaque {
@@ -154,14 +152,26 @@ main {
 
 #HTML {
     background: $gradienteHTML;
+    p{
+        font-size: 20px;
+        text-align: justify;
+    }
 }
 
 #CSS {
     background: $gradienteCSS;
+    p{
+        font-size: 20px;
+        text-align: justify;
+    }
 }
 
 #JavaScript {
     background: $gradienteJS;
+    p{
+        font-size: 20px;
+        text-align: justify;
+    }
 }
 
 #LinksUteis {
@@ -222,59 +232,462 @@ main {
 
 
 //Smartphones em modo retrato
-@media (min-width: map-get($breakpoints, xs)) {
+@media (min-width: map-get($breakpoints, xs))  and (orientation: portrait){
+#Destaque{
+    background-size: 235vw;
+}
+
     #logo {
         width: 100px;
         height: 100px;
     }
-    .menu{
-        height: 50px;
-        ul {
-            height: 50px;
-        }
-    }   
-}
 
-// Smartphones em modo paisagem ou Tablets em modo retrato
-@media (min-width: map-get($breakpoints, sm)) {
-    #logo {
-        width: 200px;
-        height: 200px;
-    }
     .menu{
-        height: 100px;
+        height: 49px;
         ul {
             height: 100px;
         }
+        li{
+            margin: 5px 10px 0px 10px;
+        }
+
+        a{
+            font-size: 12px;
+        }
     }
+
+    .flex-container-row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:flex-start;
+    }
+
+    header.flex-container-row div img{
+        width: 50%;
+    }
+
+    main {
+        font-size: 13px;
+    }
+
+    #imagens {
+        width: 150px;
+        height: 150px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30%;
+    }
+
+    #HTML, #CSS, #JavaScript{
+        p{
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .section-details{
+        margin-left: 15%;
+    }
+
+    section{
+        h2{
+            font-size: 26px;
+        }
+    
+        h3{
+            font-size: 15px;
+        }
+
+        ul{
+            font-size: 10px;
+        }
+    }
+
+    #LinksUteis{
+        flex-direction: column;
+        height: 40vh;
+        li{
+            width: 130%;
+            align-items: flex-start;
+        }
+        h2{
+            font-size: 20px;
+        }
+        h3{
+            font-size: 14px
+        }
+    }
+
+    .botao {
+        padding: 12px 20px;
+        border-radius: 15px;
+        width: 140px;
+        font-size: 11px;
+    }
+
+    #links {
+        width: 12px;
+        height: 12px;
+    }
+
+    #sociais{
+        width: 25px;
+        height: 25px;
+    }
+
+    #Rodape{
+            p, li{
+                margin: 10px;
+                font-size: 13px;
+            }
+        }
+}
+
+
+// Smartphones em modo paisagem
+@media (min-width: map-get($breakpoints, sm)) and (orientation: landscape){
+    #logo {
+        width: 145px;
+        height: 145px;
+    }
+
+    section{
+        align-items: center !important;
+        justify-content: center;
+
+    }
+
+    .menu{
+        height: 75px;
+        ul {
+            height: 100px;
+        }
+        li{
+            margin: 20px;
+        }
+        a{
+            
+            font-size: 16px;
+        }
+    }
+
+    .flex-container-row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:flex-start;
+    }
+
+    header.flex-container-row div img{
+        width: 50%;
+    }
+
+    main {
+        font-size: 15px;
+    }
+
+    #imagens {
+        width: 180px;
+        height: 180px;
+        align-items: center;
+    }
+
+    #HTML, #CSS, #JavaScript{
+        p{
+            font-size: 12px;
+        }
+    }
+
+    section{
+        h2{
+            font-size: 26px;
+        }
+    
+        h3{
+            font-size: 18px;
+        }
+
+        ul{
+            font-size: 11px;
+        }
+    }
+
+    .botao {
+        padding: 12px 20px;
+        border-radius: 15px;
+        width: 140px;
+        font-size: 11px;
+    }
+
+    #links {
+        width: 30px;
+        height: 30px;
+    }
+
+    #sociais{
+        width: 25px;
+        height: 25px;
+    }
+
+    #Rodape{
+            p, li{
+                margin: 10px;
+                font-size: 13px;
+            }
+        }
+}
+
+// Tablets em modo retrato
+@media (min-width: map-get($breakpoints, sm))  and (orientation: portrait){
+    #logo {
+        width: 145px;
+        height: 145px;
+    }
+
+    section{
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #InverterFlexBox{
+        flex-direction: row-reverse;
+    }
+
+    .menu{
+        height: 75px;
+        ul {
+            height: 100px;
+        }
+        li{
+            margin: 20px;
+        }
+        a{
+            
+            font-size: 16px;
+        }
+    }
+
+    .flex-container-row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:flex-start;
+    }
+
+    header.flex-container-row div img{
+        width: 50%;
+    }
+
+    main {
+        font-size: 15px;
+    }
+
+    #imagens {
+        margin-left: 210px;
+        margin-right: 210px;
+        width: 150px;
+        height: 150px;
+        align-items: center;
+
+    }
+
+    #HTML, #CSS, #JavaScript{
+        p{
+            font-size: 12px;
+        }
+    }
+
+    section{
+        h2{
+            font-size: 26px;
+        }
+    
+        h3{
+            font-size: 18px;
+        }
+
+        ul{
+            font-size: 11px;
+        }
+    }
+
+    .section-details{
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+
+    .botao {
+        padding: 12px 20px;
+        border-radius: 15px;
+        width: 140px;
+        font-size: 11px;
+    }
+
+    #links {
+        width: 30px;
+        height: 30px;
+    }
+
+    #sociais{
+        width: 25px;
+        height: 25px;
+    }
+
+    #Rodape{
+            p, li{
+                margin: 10px;
+                font-size: 13px;
+            }
+        }
 }
 
 //Tablets em modo paisagem
-@media (min-width: map-get($breakpoints, md)) {
+@media (min-width: map-get($breakpoints, md)) and (orientation: landscape) {
     #logo {
-        width: 200px;
-        height: 200px;
+        width: 174px;
+        height: 174px;
     }
+
     .menu{
-        height: 100px;
+        height: 90px;
         ul {
             height: 100px;
+            margin-top: 8px;
+        }
+        a{
+            font-size: 20px;
         }
     }
+
+    main {
+        font-size: 19px;
+    }
+
+    #imagens {
+        width: 150px;
+        height: 150px;
+    }
+
+    #HTML, #CSS, #JavaScript{
+        p{
+            font-size: 15px;
+        }
+    }
+
+    section{
+        h2{
+            font-size: 30px;
+        }
+    
+        h3{
+            font-size: 22px;
+        }
+
+        ul{
+            font-size: 14.5px;
+        }
+    }
+
+    .botao {
+        padding: 12px 50px;
+        border-radius: 15px;
+        width: 170px;
+        font-size: 13px;
+    }
+
+    #links {
+        width: 37px;
+        height: 37px;
+    }
+
+    #sociais{
+        width: 28.5px;
+        height: 28.5px;
+    }
+
+    #Rodape{
+            p, li{
+                margin: 10px;
+                font-size: 14.5px;
+            }
+        }
 }
 
 //Desktops
 @media (min-width: map-get($breakpoints, lg)) {
     #logo {
-        width: 260px;
-        height: 260px;
+        width: 180px;
+        height: 180px;
     }
+
     .menu{
-        height: 130px;
+        height: 90px;
         ul {
-            height: 130px;
+            height: 100px;
+            margin-top: 7px;
+        }
+        a{
+            font-size: 21px;
         }
     }
+
+    main {
+        font-size: 20px;
+    }
+
+    #imagens {
+        width: 180px;
+        height: 180px;
+    }
+
+    #HTML, #CSS, #JavaScript{
+        p{
+            font-size: 17px;
+        }
+    }
+
+    section{
+        h2{
+            font-size: 40px;
+        }
+    
+        h3{
+            font-size: 27px;
+        }
+
+        ul{
+            font-size: 18px;
+        }
+    }
+
+    .botao {
+        padding: 14px 50px;
+        border-radius: 15px;
+        width: 190px;
+        font-size: 15px;
+    }
+
+    #links {
+        width: 40px;
+        height: 40px;
+    }
+
+    #sociais{
+        width: 35px;
+        height: 35px;
+    }
+
+    #Rodape{
+            p, li{
+                margin: 10px;
+                font-size: 17px;
+            }
+        }
 }
 
 //Desktops com alta definição HD e FHD
@@ -283,10 +696,27 @@ main {
         width: 40px;
         height: 40px;
     }
+
+    .menu{
+        height: 90px;
+        ul {
+            margin-top: 10px ;
+            height: 100px;
+        }
+        a{
+            font-size: 28px;
+        }
+    }
 }
 
 //Desktops com ultra alta definição QHD e UHD
 @media (min-width: map-get($breakpoints, xxl)) {
+    #HTML, #CSS, #JavaScript{
+        p{
+            font-size: 30px;
+        }
+    }
+
     #sociais{
         width: 60px;
         height: 60px;
@@ -318,6 +748,7 @@ main {
         height: 200px;
         ul {
             height: 200px;
+            margin-top: 45px;
         }
         a{
             font-size: 55px;
@@ -330,19 +761,15 @@ main {
 
     section{
         h2{
-            font-size: 90px;
+            font-size: 75px;
         }
     
         h3{
-            font-size: 60px;
-        }
-    
-        p{
-            font-size: 35px;
-        }
-    
-        ul{
             font-size: 45px;
+        }
+
+        ul{
+            font-size: 30px;
         }
     }
 

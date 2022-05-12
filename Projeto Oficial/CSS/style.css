@@ -29,6 +29,10 @@
           align-items: center;
 }
 
+header.flex-container-row div img {
+  width: 50%;
+}
+
 .flex-container-column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,7 +132,6 @@ section {
   height: 75vh;
   text-align: center;
   overflow: hidden;
-  border: 1px solid black;
   font-weight: bold;
 }
 
@@ -140,10 +143,6 @@ section h3 {
   font-size: 27px;
 }
 
-section p {
-  font-size: 18px;
-}
-
 section ul {
   font-size: 18px;
 }
@@ -153,7 +152,6 @@ main {
   height: 75vh;
   text-align: center;
   overflow: hidden;
-  border: 1px solid black;
 }
 
 #Destaque {
@@ -167,14 +165,29 @@ main {
   background: linear-gradient(90deg, rgba(228, 77, 38, 0.8) 0%, rgba(241, 101, 41, 0.8) 100%);
 }
 
+#HTML p {
+  font-size: 20px;
+  text-align: justify;
+}
+
 #CSS {
   background: -webkit-gradient(linear, left top, right top, from(rgba(38, 77, 228, 0.8)), to(rgba(41, 101, 241, 0.8)));
   background: linear-gradient(90deg, rgba(38, 77, 228, 0.8) 0%, rgba(41, 101, 241, 0.8) 100%);
 }
 
+#CSS p {
+  font-size: 20px;
+  text-align: justify;
+}
+
 #JavaScript {
   background: -webkit-gradient(linear, left top, right top, from(rgba(229, 162, 40, 0.8)), to(rgba(241, 191, 38, 0.8)));
   background: linear-gradient(90deg, rgba(229, 162, 40, 0.8) 0%, rgba(241, 191, 38, 0.8) 100%);
+}
+
+#JavaScript p {
+  font-size: 20px;
+  text-align: justify;
 }
 
 #LinksUteis {
@@ -239,55 +252,406 @@ main {
   }
 }
 
-@media (min-width: 0) {
+@media (min-width: 0) and (orientation: portrait) {
+  #Destaque {
+    background-size: 235vw;
+  }
   #logo {
     width: 100px;
     height: 100px;
   }
   .menu {
-    height: 50px;
+    height: 49px;
   }
   .menu ul {
-    height: 50px;
+    height: 100px;
+  }
+  .menu li {
+    margin: 5px 10px 0px 10px;
+  }
+  .menu a {
+    font-size: 12px;
+  }
+  .flex-container-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header.flex-container-row div img {
+    width: 50%;
+  }
+  main {
+    font-size: 13px;
+  }
+  #imagens {
+    width: 150px;
+    height: 150px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 30%;
+  }
+  #HTML p, #CSS p, #JavaScript p {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .section-details {
+    margin-left: 15%;
+  }
+  section h2 {
+    font-size: 26px;
+  }
+  section h3 {
+    font-size: 15px;
+  }
+  section ul {
+    font-size: 10px;
+  }
+  #LinksUteis {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 40vh;
+  }
+  #LinksUteis li {
+    width: 130%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #LinksUteis h2 {
+    font-size: 20px;
+  }
+  #LinksUteis h3 {
+    font-size: 14px;
+  }
+  .botao {
+    padding: 12px 20px;
+    border-radius: 15px;
+    width: 140px;
+    font-size: 11px;
+  }
+  #links {
+    width: 12px;
+    height: 12px;
+  }
+  #sociais {
+    width: 25px;
+    height: 25px;
+  }
+  #Rodape p, #Rodape li {
+    margin: 10px;
+    font-size: 13px;
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) and (orientation: landscape) {
   #logo {
-    width: 200px;
-    height: 200px;
+    width: 145px;
+    height: 145px;
+  }
+  section {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .menu {
-    height: 100px;
+    height: 75px;
   }
   .menu ul {
     height: 100px;
+  }
+  .menu li {
+    margin: 20px;
+  }
+  .menu a {
+    font-size: 16px;
+  }
+  .flex-container-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header.flex-container-row div img {
+    width: 50%;
+  }
+  main {
+    font-size: 15px;
+  }
+  #imagens {
+    width: 180px;
+    height: 180px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #HTML p, #CSS p, #JavaScript p {
+    font-size: 12px;
+  }
+  section h2 {
+    font-size: 26px;
+  }
+  section h3 {
+    font-size: 18px;
+  }
+  section ul {
+    font-size: 11px;
+  }
+  .botao {
+    padding: 12px 20px;
+    border-radius: 15px;
+    width: 140px;
+    font-size: 11px;
+  }
+  #links {
+    width: 30px;
+    height: 30px;
+  }
+  #sociais {
+    width: 25px;
+    height: 25px;
+  }
+  #Rodape p, #Rodape li {
+    margin: 10px;
+    font-size: 13px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) and (orientation: portrait) {
   #logo {
-    width: 200px;
-    height: 200px;
+    width: 145px;
+    height: 145px;
+  }
+  section {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #InverterFlexBox {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   .menu {
-    height: 100px;
+    height: 75px;
   }
   .menu ul {
     height: 100px;
+  }
+  .menu li {
+    margin: 20px;
+  }
+  .menu a {
+    font-size: 16px;
+  }
+  .flex-container-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header.flex-container-row div img {
+    width: 50%;
+  }
+  main {
+    font-size: 15px;
+  }
+  #imagens {
+    margin-left: 210px;
+    margin-right: 210px;
+    width: 150px;
+    height: 150px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #HTML p, #CSS p, #JavaScript p {
+    font-size: 12px;
+  }
+  section h2 {
+    font-size: 26px;
+  }
+  section h3 {
+    font-size: 18px;
+  }
+  section ul {
+    font-size: 11px;
+  }
+  .section-details {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+  .botao {
+    padding: 12px 20px;
+    border-radius: 15px;
+    width: 140px;
+    font-size: 11px;
+  }
+  #links {
+    width: 30px;
+    height: 30px;
+  }
+  #sociais {
+    width: 25px;
+    height: 25px;
+  }
+  #Rodape p, #Rodape li {
+    margin: 10px;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  #logo {
+    width: 174px;
+    height: 174px;
+  }
+  .menu {
+    height: 90px;
+  }
+  .menu ul {
+    height: 100px;
+    margin-top: 8px;
+  }
+  .menu a {
+    font-size: 20px;
+  }
+  main {
+    font-size: 19px;
+  }
+  #imagens {
+    width: 150px;
+    height: 150px;
+  }
+  #HTML p, #CSS p, #JavaScript p {
+    font-size: 15px;
+  }
+  section h2 {
+    font-size: 30px;
+  }
+  section h3 {
+    font-size: 22px;
+  }
+  section ul {
+    font-size: 14.5px;
+  }
+  .botao {
+    padding: 12px 50px;
+    border-radius: 15px;
+    width: 170px;
+    font-size: 13px;
+  }
+  #links {
+    width: 37px;
+    height: 37px;
+  }
+  #sociais {
+    width: 28.5px;
+    height: 28.5px;
+  }
+  #Rodape p, #Rodape li {
+    margin: 10px;
+    font-size: 14.5px;
   }
 }
 
 @media (min-width: 992px) {
   #logo {
-    width: 260px;
-    height: 260px;
+    width: 180px;
+    height: 180px;
   }
   .menu {
-    height: 130px;
+    height: 90px;
   }
   .menu ul {
-    height: 130px;
+    height: 100px;
+    margin-top: 7px;
+  }
+  .menu a {
+    font-size: 21px;
+  }
+  main {
+    font-size: 20px;
+  }
+  #imagens {
+    width: 180px;
+    height: 180px;
+  }
+  #HTML p, #CSS p, #JavaScript p {
+    font-size: 17px;
+  }
+  section h2 {
+    font-size: 40px;
+  }
+  section h3 {
+    font-size: 27px;
+  }
+  section ul {
+    font-size: 18px;
+  }
+  .botao {
+    padding: 14px 50px;
+    border-radius: 15px;
+    width: 190px;
+    font-size: 15px;
+  }
+  #links {
+    width: 40px;
+    height: 40px;
+  }
+  #sociais {
+    width: 35px;
+    height: 35px;
+  }
+  #Rodape p, #Rodape li {
+    margin: 10px;
+    font-size: 17px;
   }
 }
 
@@ -296,9 +660,22 @@ main {
     width: 40px;
     height: 40px;
   }
+  .menu {
+    height: 90px;
+  }
+  .menu ul {
+    margin-top: 10px;
+    height: 100px;
+  }
+  .menu a {
+    font-size: 28px;
+  }
 }
 
 @media (min-width: 2000px) {
+  #HTML p, #CSS p, #JavaScript p {
+    font-size: 30px;
+  }
   #sociais {
     width: 60px;
     height: 60px;
@@ -326,6 +703,7 @@ main {
   }
   .menu ul {
     height: 200px;
+    margin-top: 45px;
   }
   .menu a {
     font-size: 55px;
@@ -334,16 +712,13 @@ main {
     font-size: 45px;
   }
   section h2 {
-    font-size: 90px;
+    font-size: 75px;
   }
   section h3 {
-    font-size: 60px;
-  }
-  section p {
-    font-size: 35px;
+    font-size: 45px;
   }
   section ul {
-    font-size: 45px;
+    font-size: 30px;
   }
   #Rodape p, #Rodape li {
     margin: 20px;
