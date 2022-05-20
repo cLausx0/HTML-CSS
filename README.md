@@ -1,2 +1,2 @@
 # HTML-CSS
-Repositório para projetos de HTML e CSS do MouraTech
+Repositório para projeto inicial OnePage de HTML e CSS do MouraTech
